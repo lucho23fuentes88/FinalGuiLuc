@@ -8,7 +8,7 @@
     <script src="jq/jquery-3.6.0.min.js"></script>
     <script src="js/final.js"></script>
     <script src="js/parallax.js"></script>
-    
+
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,16 +42,16 @@
                 <article>
                     <h3>Nosotros</h3>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis temporibus a molestiae cum quibusdam,
-                         iste quos animi repudiandae placeat earum omnis enim reprehenderit suscipit sint unde, sapiente quo aliquid aperiam.
+                        iste quos animi repudiandae placeat earum omnis enim reprehenderit suscipit sint unde, sapiente quo aliquid aperiam.
                     </p>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis temporibus a molestiae cum quibusdam,
                         iste quos animi repudiandae placeat earum omnis enim reprehenderit suscipit sint unde, sapiente quo aliquid aperiam.
-                   </p>
+                    </p>
                 </article>
             </div>
     </section>
 
-        <section class="menu">
+    <section class="menu">
             <div class="contenedor">
                 <h3 class="titulo" id="laCarta">Nuestros Productos</h3>
                 <div class="contenedor-menu">
@@ -112,7 +112,21 @@
                     </div>
                 </div>
             </div>
-        </section>
+    </section>
+        
+    <!--API-->
+    <section> <!--Buscador-->
+        <div class="buscador">
+            <h1>¡Buscá tu receta T.U.P!</h1>
+            <div class="input-group mb-3">
+                <input type="text" class="form-control" placeholder="ej. Pasta" aria-label="Recipient's username" aria-describedby="button-addon2">
+                <div class="input-group-append" id="ingreso">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>
+                </div>
+            </div>
+        </div><!--cards-->
+        <div id= receta></div> 
+    </section>
 
         <section class="galeria" id="galeria">
             <div class="foto">
@@ -172,7 +186,7 @@
             </div>
         </div>
     </footer>
-    
+    <script src="js/api.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>

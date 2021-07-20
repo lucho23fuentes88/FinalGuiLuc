@@ -6,12 +6,12 @@ $(document).ready(function(){
             var scroll = $(window).scrollTop();
 
             $('header .textos').css ({
-                 'transform': 'translate(0px,' + scroll / 2 + '%)'                    
+                'transform': 'translate(0px,' + scroll / 2 + '%)'                    
             });
 
             $('.nosotros article').css ({
                 'transform': 'translate(0px, -' + scroll / 4 + '%)'                    
-           });
+            });
         }
     });
 
@@ -20,7 +20,7 @@ $(document).ready(function(){
         if(windowWidth < 800){
             $('.nosotros article').css ({
                 'transform': 'translate(0px, 0px)'                    
-           });
+            });
         };
     }); 
 
