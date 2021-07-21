@@ -12,12 +12,13 @@ const apiRequest = async()=>{
     const response = await fetch(`https://api.edamam.com/search?app_id=${apiId}&app_key=${apiKey}&q=${buscar.value}`);
     //console.log(response)
     var data = await response.json();
-    console.log(data); //control
+    //console.log(data);
     apiData(data);
 };
 
 //For para recorrer cada elemento del array y devolver las cards.
 function apiData(data){
+    document.querySelector("#receta").innerHTML = ''
     for (let i=0; i < 3; i++) { 
         //Card de una receta
         document.querySelector("#receta").innerHTML += `
