@@ -1,12 +1,10 @@
 const botonBuscar = document.querySelector("#button-addon2");
-//var q = document.getElementById('ingreso').value;
 
 botonBuscar.addEventListener("click", ()=>{
-    console.log ("hizo click!"); //por control
+    var q = document.getElementsByClassName("form-control").value; // PROBLEMAS DE SCOPE?
+    //console.log ("hizo click!"); 
     apiRequest();
 })
-
-var q = "pizza";
 
 const apiRequest = async()=>{
     const apiId = "6d774005";
@@ -18,11 +16,11 @@ const apiRequest = async()=>{
     apiData(data);
 };
 
-//For para recorrer cada elemento del array y devolver las cards. MUESTRA SOLO UNO.
+//For para recorrer cada elemento del array y devolver las cards.
 function apiData(data){
     for (let i=0; i < 10; i++) { 
         //Card de una receta
-        document.querySelector("#receta").innerHTML = `
+        document.querySelector("#receta").innerHTML += `
         <div class="card" style="max-width: 950px;">
             <div class="row no-gutters">
                 <div class="col-md-4">
