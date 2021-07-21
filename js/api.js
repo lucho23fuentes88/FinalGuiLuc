@@ -1,7 +1,7 @@
 const botonBuscar = document.querySelector("#button-addon2");
 
 botonBuscar.addEventListener("click", ()=>{
-    var q = document.getElementsByClassName("form-control").value; // PROBLEMAS DE SCOPE?
+    document.getElementById("buscar"); 
     //console.log ("hizo click!"); 
     apiRequest();
 })
@@ -9,7 +9,7 @@ botonBuscar.addEventListener("click", ()=>{
 const apiRequest = async()=>{
     const apiId = "6d774005";
     const apiKey = "87c6358c9e48c104eac304844ab8bbb9";
-    const response = await fetch(`https://api.edamam.com/search?app_id=${apiId}&app_key=${apiKey}&q=${q}`);
+    const response = await fetch(`https://api.edamam.com/search?app_id=${apiId}&app_key=${apiKey}&q=${buscar.value}`);
     //console.log(response)
     var data = await response.json();
     console.log(data); //control
@@ -18,7 +18,7 @@ const apiRequest = async()=>{
 
 //For para recorrer cada elemento del array y devolver las cards.
 function apiData(data){
-    for (let i=0; i < 10; i++) { 
+    for (let i=0; i < 3; i++) { 
         //Card de una receta
         document.querySelector("#receta").innerHTML += `
         <div class="card" style="max-width: 950px;">
