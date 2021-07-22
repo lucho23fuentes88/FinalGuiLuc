@@ -26,12 +26,21 @@ $(document).ready(function(){
     $('#nosotros').offset().top,
     menu = $('#laCarta').offset().top,
     galeria = $('#galeria').offset().top,
-    ubicacion = $('#ubicacion').offset().top;
+    ubicacion = $('#ubicacion').offset().top,
+    recetas = $('.buscador').offset().top;
+
     
     $('#btn-nosotros').on('click', function(e){
         e.preventDefault();
         $('html, body').animate({
             scrollTop: 500
+        }, 500);
+    });
+
+    $('#btn-recetas').on('click', function(e){
+        e.preventDefault();
+        $('html, body').animate({
+            scrollTop: recetas
         }, 500);
     });
 
